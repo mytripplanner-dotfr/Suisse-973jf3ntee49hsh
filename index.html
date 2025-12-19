@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Éclat Alpin : Un Voyage Suisse entre Lacs et Sommets </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée à Zurich et première immersion</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Zurich, entre culture et lac</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Lucerne, la perle de la Suisse centrale</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 L'ascension du Mont Pilate</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Interlaken, porte des Alpes bernoises</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Le Toit de l'Europe : Jungfraujoch</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Retour à Zurich et départ</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Suisse-973jf3ntee49hsh/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">SUISSE</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">L'Éclat Alpin : Un Voyage Suisse entre Lacs et Sommets</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ 7 jours</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 4150€/pers</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 15h avec escale depuis Bazi, chine</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à Zurich et première immersion</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage depuis Bazi, découvrez Zurich en douceur. Flânez le long de la Limmat, admirez l'architecture et imprégnez-vous de l'atmosphère sereine de cette ville élégante. Une journée pour se reposer et s'acclimater au décalage horaire.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée à l'aéroport de Zurich (ZRH)</strong> : Après votre vol, récupérez vos bagages et rejoignez votre hôtel pour vous installer. Prenez le temps de vous rafraîchir et de vous détendre après le voyage.</li><li>🚶‍♂️ <strong>Balade le long de la Limmat et dans la vieille ville</strong> : Promenez-vous tranquillement le long de la rivière Limmat, admirez les façades colorées et les églises historiques. C'est une excellente façon de s'acclimater sans effort et de prendre un premier contact avec la ville.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Suisse-973jf3ntee49hsh/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">😴 Jet lag</p>
+                                <p class="text-gray-700">Le décalage horaire entre Bazi et la Suisse est significatif. Prévoyez une journée légère pour vous adapter et éviter la fatigue accumulée durant le vol.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💰 Monnaie</p>
+                                <p class="text-gray-700">La monnaie locale est le Franc Suisse (CHF). Les cartes de crédit sont largement acceptées, mais avoir un peu de liquide est toujours utile pour les petites dépenses.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Zurich, entre culture et lac</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez au cœur de Zurich, une ville qui allie dynamisme urbain et splendeurs naturelles. Explorez ses trésors culturels avant de vous laisser charmer par la quiétude de son lac, offrant des vues imprenables sur les Alpes au loin par temps clair.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>⛪ <strong>Visite du Grossmünster et Fraumünster</strong> : Découvrez ces deux emblématiques églises de Zurich, situées de part et d'autre de la Limmat. Admirez les vitraux de Chagall au Fraumünster et montez à la tour du Grossmünster pour une vue panoramique sur la ville.</li><li>🚢 <strong>Croisière sur le lac de Zurich</strong> : Profitez d'une croisière relaxante sur le lac de Zurich. C'est une excellente manière d'apprécier la beauté des rives, des villas élégantes et d'apercevoir les sommets alpins par temps clair.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Suisse-973jf3ntee49hsh/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚆 Swiss Travel Pass</p>
+                                <p class="text-gray-700">Le Swiss Travel Pass est idéal pour les transports en commun (trains, bus, bateaux) et offre des réductions sur de nombreuses attractions. Activez-le dès aujourd'hui pour optimiser vos déplacements.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗣️ Langue</p>
+                                <p class="text-gray-700">À Zurich, l'allemand est la langue principale, mais l'anglais est couramment parlé dans les zones touristiques. Quelques mots de base en allemand seront appréciés par les locaux.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Lucerne, la perle de la Suisse centrale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Quittez Zurich pour rejoindre Lucerne, une ville pittoresque nichée au bord de son lac éponyme. Traversez le célèbre Pont de la Chapelle et explorez les ruelles médiévales, un véritable voyage dans le temps au cœur des Alpes suisses et de leur histoire.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚂 <strong>Voyage en train vers Lucerne</strong> : Prenez un train panoramique de Zurich à Lucerne (environ 45 min). Le trajet offre déjà de belles vues sur la campagne suisse et les premiers contreforts alpins.</li><li>🚶‍♀️ <strong>Découverte du Pont de la Chapelle et de la vieille ville</strong> : Flânez dans la vieille ville de Lucerne, admirez les maisons colorées et traversez le Kapellbrücke, le plus ancien pont en bois couvert d'Europe, avec ses peintures intérieures historiques.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Suisse-973jf3ntee49hsh/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧀 Spécialités culinaires</p>
+                                <p class="text-gray-700">Goûtez la fondue au fromage ou la raclette, des plats emblématiques suisses. Accompagnez-les d'un vin blanc local pour une expérience authentique et chaleureuse.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🕰️ Horaires des magasins</p>
+                                <p class="text-gray-700">Les magasins ferment généralement plus tôt en Suisse, surtout le dimanche. Planifiez vos achats en conséquence pour ne pas être pris au dépourvu.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">L'ascension du Mont Pilate</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Élevez-vous au-dessus des nuages pour une expérience alpine inoubliable. Le Mont Pilate offre des panoramas spectaculaires sur les montagnes et les lacs environnants, une véritable immersion dans la grandeur de la nature suisse et ses légendes mystérieuses.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚠 <strong>Excursion au Mont Pilate (Golden Round Trip)</strong> : Embarquez pour le "Golden Round Trip" : bateau sur le lac des Quatre-Cantons, train à crémaillère le plus raide du monde jusqu'au sommet du Pilate, puis descente en télécabine et téléphérique. Une journée complète d'aventures et de vues époustouflantes.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Suisse-973jf3ntee49hsh/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧣 Vêtements</p>
+                                <p class="text-gray-700">Même en été, les températures au sommet des montagnes peuvent être fraîches. Prévoyez des couches de vêtements chauds et un coupe-vent pour votre confort.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Météo</p>
+                                <p class="text-gray-700">Vérifiez la météo avant de monter au Pilate. Une vue dégagée est essentielle pour profiter pleinement du panorama et éviter la déception d'un sommet dans les nuages.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Interlaken, porte des Alpes bernoises</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Direction Interlaken, la capitale de l'aventure suisse, nichée entre deux lacs aux eaux turquoise. Préparez-vous à être émerveillé par les paysages grandioses des Alpes bernoises, un prélude aux sommets enneigés et aux vallées verdoyantes qui vous attendent.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚆 <strong>Voyage en train vers Interlaken</strong> : Prenez un train pittoresque de Lucerne à Interlaken (environ 2h). Le trajet, souvent appelé "GoldenPass Line", est une attraction en soi avec des vues magnifiques sur les lacs et les montagnes.</li><li>🚶‍♂️ <strong>Balade le long de l'Aare et découverte d'Interlaken</strong> : Promenez-vous le long de la rivière Aare qui relie les deux lacs, Thun et Brienz. Explorez le centre d'Interlaken et admirez les parapentistes atterrissant sur le Höhematte, un spectacle impressionnant.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Suisse-973jf3ntee49hsh/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛶 Lacs</p>
+                                <p class="text-gray-700">Les lacs de Thun et Brienz offrent des eaux d'un bleu et vert intenses. Des croisières sont possibles si vous avez du temps libre et souhaitez explorer davantage les environs.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1"> adrenaline Activités</p>
+                                <p class="text-gray-700">Interlaken est un centre d'activités extrêmes. Si vous êtes aventureux, le parapente ou le canyoning sont des options populaires pour les amateurs de sensations fortes.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Le Toit de l'Europe : Jungfraujoch</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Atteignez le point culminant de votre voyage avec l'ascension du Jungfraujoch, le "Toit de l'Europe". Admirez les glaciers éternels et les sommets majestueux, une expérience à couper le souffle qui restera gravée dans votre mémoire pour toujours.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏔️ <strong>Excursion au Jungfraujoch</strong> : Prenez le train de montagne jusqu'à la gare la plus haute d'Europe. Explorez le Palais de Glace, la terrasse d'observation du Sphinx et profitez des vues panoramiques sur le glacier d'Aletsch, le plus long des Alpes.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Suisse-973jf3ntee49hsh/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌬️ Altitude</p>
+                                <p class="text-gray-700">Le Jungfraujoch est à 3454m d'altitude. Certaines personnes peuvent ressentir le mal des montagnes. Hydratez-vous bien et marchez lentement pour vous acclimater.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎟️ Réservation</p>
+                                <p class="text-gray-700">Il est fortement recommandé de réserver vos billets pour le Jungfraujoch à l'avance, surtout en haute saison, pour garantir votre place et choisir votre horaire préféré.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour à Zurich et départ</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après une semaine riche en découvertes alpines et urbaines, il est temps de regagner Zurich. Profitez d'un dernier regard sur les paysages suisses depuis le train avant de prendre votre vol, emportant avec vous des souvenirs impérissables de ce voyage.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚂 <strong>Voyage en train vers Zurich</strong> : Reprenez le train d'Interlaken à l'aéroport de Zurich (environ 2h30). Profitez du paysage une dernière fois et repensez aux moments forts de votre séjour.</li><li>🛍️ <strong>Derniers achats ou balade tranquille</strong> : Selon l'heure de votre vol, vous pourriez avoir le temps de faire quelques derniers achats de souvenirs à l'aéroport ou de prendre un café avant de vous diriger vers votre porte d'embarquement.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Suisse-973jf3ntee49hsh/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">✈️ Aéroport</p>
+                                <p class="text-gray-700">L'aéroport de Zurich (ZRH) est bien desservi par les transports en commun. Prévoyez suffisamment de temps pour les formalités d'enregistrement et de sécurité avant votre vol.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Souvenirs</p>
+                                <p class="text-gray-700">N'oubliez pas d'acheter du chocolat suisse, des montres ou des couteaux suisses comme souvenirs de votre voyage pour vos proches ou pour vous-même.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>1200€/pers (Vol aller-retour Bazi-Zurich en classe économique avec escale)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>450€/pers (Swiss Travel Pass 8 jours, incluant trains, bus, bateaux et réductions)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>700€/pers (Environ 100€/jour pour 7 jours, repas de type moyen)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>1400€/pers (7 nuits en hôtels 3 étoiles, environ 200€/nuit)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>400€/pers (Excursions Mont Pilate et Jungfraujoch, musées)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois de mai à juin et de septembre à octobre.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">👥 La Suisse compte environ 8,7 millions d'habitants. C'est un pays multilingue avec l'allemand, le français, l'italien et le romanche comme langues officielles.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🇨🇭 La Suisse est une confédération réputée pour sa neutralité, sa précision horlogère, son chocolat de qualité et ses paysages alpins à couper le souffle.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🏔️ Le pays possède plus de 48 sommets de plus de 4000 mètres d'altitude, plus que tout autre pays d'Europe. Elle est aussi connue pour ses nombreux tunnels et ponts impressionnants.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"> bunker Chaque citoyen suisse est tenu d'avoir accès à un abri antiatomique, une particularité unique au monde témoignant de la préparation du pays en cas de crise.</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Suisse-973jf3ntee49hsh/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.myswitzerland.com/fr/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Tourisme Suisse</strong></a></li>
+                    
+                        <li><a href="https://www.sbb.ch/fr/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🚆 Chemins de fer fédéraux suisses (CFF)</strong></a></li>
+                    
+                        <li><a href="https://www.meteosuisse.admin.ch/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ MétéoSuisse</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+        
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
