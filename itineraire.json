@@ -1,0 +1,248 @@
+{
+  "pays": "Suisse",
+  "drapeau": "🇨🇭",
+  "symbole": "🏔️",
+  "titre": "L'Éclat Alpin : Un Voyage Suisse entre Lacs et Sommets",
+  "budget_total": "4150€/pers",
+  "duree": "7 jours",
+  "temps_vol": "15h avec escale depuis Bazi, chine",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée à Zurich et première immersion",
+      "legende": "Après un long voyage depuis Bazi, découvrez Zurich en douceur. Flânez le long de la Limmat, admirez l'architecture et imprégnez-vous de l'atmosphère sereine de cette ville élégante. Une journée pour se reposer et s'acclimater au décalage horaire.",
+      "lieu": "Zurich",
+      "activites": [
+        "🛬 <strong>Arrivée à l'aéroport de Zurich (ZRH)</strong> : Après votre vol, récupérez vos bagages et rejoignez votre hôtel pour vous installer. Prenez le temps de vous rafraîchir et de vous détendre après le voyage.",
+        "🚶‍♂️ <strong>Balade le long de la Limmat et dans la vieille ville</strong> : Promenez-vous tranquillement le long de la rivière Limmat, admirez les façades colorées et les églises historiques. C'est une excellente façon de s'acclimater sans effort et de prendre un premier contact avec la ville."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "😴",
+          "titre": "Jet lag",
+          "texte": "Le décalage horaire entre Bazi et la Suisse est significatif. Prévoyez une journée légère pour vous adapter et éviter la fatigue accumulée durant le vol."
+        },
+        {
+          "symbole": "💰",
+          "titre": "Monnaie",
+          "texte": "La monnaie locale est le Franc Suisse (CHF). Les cartes de crédit sont largement acceptées, mais avoir un peu de liquide est toujours utile pour les petites dépenses."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🌆",
+      "titre": "Zurich, entre culture et lac",
+      "legende": "Plongez au cœur de Zurich, une ville qui allie dynamisme urbain et splendeurs naturelles. Explorez ses trésors culturels avant de vous laisser charmer par la quiétude de son lac, offrant des vues imprenables sur les Alpes au loin par temps clair.",
+      "lieu": "Zurich",
+      "activites": [
+        "⛪ <strong>Visite du Grossmünster et Fraumünster</strong> : Découvrez ces deux emblématiques églises de Zurich, situées de part et d'autre de la Limmat. Admirez les vitraux de Chagall au Fraumünster et montez à la tour du Grossmünster pour une vue panoramique sur la ville.",
+        "🚢 <strong>Croisière sur le lac de Zurich</strong> : Profitez d'une croisière relaxante sur le lac de Zurich. C'est une excellente manière d'apprécier la beauté des rives, des villas élégantes et d'apercevoir les sommets alpins par temps clair."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "🚆",
+          "titre": "Swiss Travel Pass",
+          "texte": "Le Swiss Travel Pass est idéal pour les transports en commun (trains, bus, bateaux) et offre des réductions sur de nombreuses attractions. Activez-le dès aujourd'hui pour optimiser vos déplacements."
+        },
+        {
+          "symbole": "🗣️",
+          "titre": "Langue",
+          "texte": "À Zurich, l'allemand est la langue principale, mais l'anglais est couramment parlé dans les zones touristiques. Quelques mots de base en allemand seront appréciés par les locaux."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🏞️",
+      "titre": "Lucerne, la perle de la Suisse centrale",
+      "legende": "Quittez Zurich pour rejoindre Lucerne, une ville pittoresque nichée au bord de son lac éponyme. Traversez le célèbre Pont de la Chapelle et explorez les ruelles médiévales, un véritable voyage dans le temps au cœur des Alpes suisses et de leur histoire.",
+      "lieu": "Lucerne",
+      "activites": [
+        "🚂 <strong>Voyage en train vers Lucerne</strong> : Prenez un train panoramique de Zurich à Lucerne (environ 45 min). Le trajet offre déjà de belles vues sur la campagne suisse et les premiers contreforts alpins.",
+        "🚶‍♀️ <strong>Découverte du Pont de la Chapelle et de la vieille ville</strong> : Flânez dans la vieille ville de Lucerne, admirez les maisons colorées et traversez le Kapellbrücke, le plus ancien pont en bois couvert d'Europe, avec ses peintures intérieures historiques."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "🧀",
+          "titre": "Spécialités culinaires",
+          "texte": "Goûtez la fondue au fromage ou la raclette, des plats emblématiques suisses. Accompagnez-les d'un vin blanc local pour une expérience authentique et chaleureuse."
+        },
+        {
+          "symbole": "🕰️",
+          "titre": "Horaires des magasins",
+          "texte": "Les magasins ferment généralement plus tôt en Suisse, surtout le dimanche. Planifiez vos achats en conséquence pour ne pas être pris au dépourvu."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "⛰️",
+      "titre": "L'ascension du Mont Pilate",
+      "legende": "Élevez-vous au-dessus des nuages pour une expérience alpine inoubliable. Le Mont Pilate offre des panoramas spectaculaires sur les montagnes et les lacs environnants, une véritable immersion dans la grandeur de la nature suisse et ses légendes mystérieuses.",
+      "lieu": "Lucerne (excursion)",
+      "activites": [
+        "🚠 <strong>Excursion au Mont Pilate (Golden Round Trip)</strong> : Embarquez pour le \"Golden Round Trip\" : bateau sur le lac des Quatre-Cantons, train à crémaillère le plus raide du monde jusqu'au sommet du Pilate, puis descente en télécabine et téléphérique. Une journée complète d'aventures et de vues époustouflantes."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "🧣",
+          "titre": "Vêtements",
+          "texte": "Même en été, les températures au sommet des montagnes peuvent être fraîches. Prévoyez des couches de vêtements chauds et un coupe-vent pour votre confort."
+        },
+        {
+          "symbole": "☀️",
+          "titre": "Météo",
+          "texte": "Vérifiez la météo avant de monter au Pilate. Une vue dégagée est essentielle pour profiter pleinement du panorama et éviter la déception d'un sommet dans les nuages."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "💧",
+      "titre": "Interlaken, porte des Alpes bernoises",
+      "legende": "Direction Interlaken, la capitale de l'aventure suisse, nichée entre deux lacs aux eaux turquoise. Préparez-vous à être émerveillé par les paysages grandioses des Alpes bernoises, un prélude aux sommets enneigés et aux vallées verdoyantes qui vous attendent.",
+      "lieu": "Interlaken",
+      "activites": [
+        "🚆 <strong>Voyage en train vers Interlaken</strong> : Prenez un train pittoresque de Lucerne à Interlaken (environ 2h). Le trajet, souvent appelé \"GoldenPass Line\", est une attraction en soi avec des vues magnifiques sur les lacs et les montagnes.",
+        "🚶‍♂️ <strong>Balade le long de l'Aare et découverte d'Interlaken</strong> : Promenez-vous le long de la rivière Aare qui relie les deux lacs, Thun et Brienz. Explorez le centre d'Interlaken et admirez les parapentistes atterrissant sur le Höhematte, un spectacle impressionnant."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🛶",
+          "titre": "Lacs",
+          "texte": "Les lacs de Thun et Brienz offrent des eaux d'un bleu et vert intenses. Des croisières sont possibles si vous avez du temps libre et souhaitez explorer davantage les environs."
+        },
+        {
+          "symbole": " adrenaline",
+          "titre": "Activités",
+          "texte": "Interlaken est un centre d'activités extrêmes. Si vous êtes aventureux, le parapente ou le canyoning sont des options populaires pour les amateurs de sensations fortes."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "❄️",
+      "titre": "Le Toit de l'Europe : Jungfraujoch",
+      "legende": "Atteignez le point culminant de votre voyage avec l'ascension du Jungfraujoch, le \"Toit de l'Europe\". Admirez les glaciers éternels et les sommets majestueux, une expérience à couper le souffle qui restera gravée dans votre mémoire pour toujours.",
+      "lieu": "Interlaken (excursion)",
+      "activites": [
+        "🏔️ <strong>Excursion au Jungfraujoch</strong> : Prenez le train de montagne jusqu'à la gare la plus haute d'Europe. Explorez le Palais de Glace, la terrasse d'observation du Sphinx et profitez des vues panoramiques sur le glacier d'Aletsch, le plus long des Alpes."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🌬️",
+          "titre": "Altitude",
+          "texte": "Le Jungfraujoch est à 3454m d'altitude. Certaines personnes peuvent ressentir le mal des montagnes. Hydratez-vous bien et marchez lentement pour vous acclimater."
+        },
+        {
+          "symbole": "🎟️",
+          "titre": "Réservation",
+          "texte": "Il est fortement recommandé de réserver vos billets pour le Jungfraujoch à l'avance, surtout en haute saison, pour garantir votre place et choisir votre horaire préféré."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🛫",
+      "titre": "Retour à Zurich et départ",
+      "legende": "Après une semaine riche en découvertes alpines et urbaines, il est temps de regagner Zurich. Profitez d'un dernier regard sur les paysages suisses depuis le train avant de prendre votre vol, emportant avec vous des souvenirs impérissables de ce voyage.",
+      "lieu": "Zurich",
+      "activites": [
+        "🚂 <strong>Voyage en train vers Zurich</strong> : Reprenez le train d'Interlaken à l'aéroport de Zurich (environ 2h30). Profitez du paysage une dernière fois et repensez aux moments forts de votre séjour.",
+        "🛍️ <strong>Derniers achats ou balade tranquille</strong> : Selon l'heure de votre vol, vous pourriez avoir le temps de faire quelques derniers achats de souvenirs à l'aéroport ou de prendre un café avant de vous diriger vers votre porte d'embarquement."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "✈️",
+          "titre": "Aéroport",
+          "texte": "L'aéroport de Zurich (ZRH) est bien desservi par les transports en commun. Prévoyez suffisamment de temps pour les formalités d'enregistrement et de sécurité avant votre vol."
+        },
+        {
+          "symbole": "🎁",
+          "titre": "Souvenirs",
+          "texte": "N'oubliez pas d'acheter du chocolat suisse, des montres ou des couteaux suisses comme souvenirs de votre voyage pour vos proches ou pour vous-même."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "1200€/pers (Vol aller-retour Bazi-Zurich en classe économique avec escale)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "450€/pers (Swiss Travel Pass 8 jours, incluant trains, bus, bateaux et réductions)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "700€/pers (Environ 100€/jour pour 7 jours, repas de type moyen)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "1400€/pers (7 nuits en hôtels 3 étoiles, environ 200€/nuit)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "400€/pers (Excursions Mont Pilate et Jungfraujoch, musées)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de mai à juin et de septembre à octobre.",
+      "symbole": "🍁"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "La Suisse compte environ 8,7 millions d'habitants. C'est un pays multilingue avec l'allemand, le français, l'italien et le romanche comme langues officielles.",
+      "symbole": "👥"
+    },
+    {
+      "titre": "La Suisse est une confédération réputée pour sa neutralité, sa précision horlogère, son chocolat de qualité et ses paysages alpins à couper le souffle.",
+      "symbole": "🇨🇭"
+    },
+    {
+      "titre": "Le pays possède plus de 48 sommets de plus de 4000 mètres d'altitude, plus que tout autre pays d'Europe. Elle est aussi connue pour ses nombreux tunnels et ponts impressionnants.",
+      "symbole": "🏔️"
+    },
+    {
+      "titre": "Chaque citoyen suisse est tenu d'avoir accès à un abri antiatomique, une particularité unique au monde témoignant de la préparation du pays en cas de crise.",
+      "symbole": " bunker"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Infos officielles et inspirations pour votre voyage en Suisse",
+      "titre": "Tourisme Suisse",
+      "url": "https://www.myswitzerland.com/fr/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Horaires et réservations des transports publics suisses (trains, bus, bateaux)",
+      "titre": "Chemins de fer fédéraux suisses (CFF)",
+      "url": "https://www.sbb.ch/fr/",
+      "symbole": "🚆"
+    },
+    {
+      "legende": "Prévisions météo détaillées pour toutes les régions de Suisse",
+      "titre": "MétéoSuisse",
+      "url": "https://www.meteosuisse.admin.ch/",
+      "symbole": "🌤️"
+    }
+  ]
+}
